@@ -1,0 +1,17 @@
+Code	Domain	Language	LinesOfCode	MajorWarning	MinorWraning	ClangWarning	Malloc	Valgrind	Assertions	LinesChecked	FilesChecked	DuplicatedLines	DuplicatedBlocks	FilesWithDuplicatedBlocks
+PAML	Phylogenetics	C	12908	11	121	242	NoCast	clean	0	22200	17	1210	120	11
+PHYML	Phylogenetics	C	56456	0	0	3188	NoCast	clean	0.16	42786	73	5878	549	32
+MrBayes	Phylogenetics	C	94432	2	0	905	MisCast	invalid & leaks	2.37	70680	19	21862	1680	10
+SOAP	DeNovoAssembly	C/C++	37020	145	628	5750	NoCast	leaks	0	27514	116	10107	527	72
+Abyss	DeNovoAssembly	C	43189	0	0	5820	NoError	clean	1.56	37038	212	4245	441	71
+MS	PopGenetics	C	2063	10	22	125	WrongCast	leaks	0	1718	24	186	21	9
+SweepFinder	PopGenetics	C	4465	0	15	234	NoCast	clean	1.56	3777	12	293	28	3
+MAFFT	SeqAlign	C	57688	61	73	1572	NoCast	leaks	0.44	45045	72	28630	1647	59
+T-Coffee	SeqAlign	C	160223	345	619	5478	NoCast	leaks	0.44	82758	196	19345	1325	58
+Prank	SeqAlign	C++	23943	164	6	2906	NoCast	invalid	9.19	16124	67	5318	462	43
+BEAST	DivTimes	Java	302611	22	3778	NA	NoError	NA	0	228316	2336	64024	4786	1151
+FDPPDIV	DivTimes	C++	11474	35	40	708	NoError	leaks	0.26	NA	NA	NA	NA	NA
+BP&P	MuliSpCoalescence	C	16593	5	97	813	NoCast	leaks	0	14332	5	502	56	3
+SeqGen	SeqSimulation	C	3977	0	4	204	NoError	leaks	0	3244	44	206	25	6
+INDELible	SeqSimulation	C++	11402	0	260	2078	NoError	clean	0	9840	7	1954	106	5
+Gadget-2	Astrophysics	C	12509	0	36	610	NoCast	probably clean	0	9770	31	3314	180	31
