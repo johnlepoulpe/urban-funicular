@@ -13,7 +13,10 @@ Clément:
 - duplicated line of code/program
 - ducplicated code blocks/program
 
-* TODO À faire [2/3] 						   :noexport:
+* TODO À faire [5/6]                                               :noexport:
 - [X] Question 1 
 - [X] Question 2
-- [ ] Question 3 
+- [X] Question 3 
+- [X] Question 4
+- [X] Question 5
+- [ ] Question 6
