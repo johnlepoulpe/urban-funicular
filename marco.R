@@ -3,6 +3,8 @@ tab <- read.table("programs.txt", header=TRUE, sep= "\t")
 tab_lines = tab[order(tab$LinesOfCode, decreasing = TRUE),]
 tab_dupl = tab[order(tab$DuplicatedBlocks, decreasing = TRUE),]
 
+tab_C = tab()
+
 #tab$assert: number of assert() for 1000 lines of code
 
 barplot(table(tab$Language), main = "Number of programs written in a given language")
@@ -18,9 +20,14 @@ barplot(tab_lines$LinesOfCode, names.arg = tab_lines$Code, las = 2, main = "Numb
 op = par(mar = c(7, 4, 4, 2) + 0.1)
 barplot(tab_dupl$DuplicatedBlocks, names.arg = tab_dupl$Code, las = 2, main = "Number of duplicated code blocks for each program")
 
+temp_noNA_dupl = tab_lines$DuplicatedLines[is.na(tab_lines$DuplicatedLines) == FALSE]
+temp_noNA_lines = tab_lines$LinesOfCode[is.na(tab_lines$DuplicatedLines) == FALSE]
+temp_noNA_code = tab_lines$Code[is.na(tab_lines$DuplicatedLines) == FALSE]
+
 data = data.frame(temp_noNA_code, temp_noNA_dupl / temp_noNA_lines)
 colnames(data) = c("Program", "DupLin_per")
 data = data[order(data$DupLin_per, decreasing = TRUE),]
+
 op = par(mar = c(7, 4, 4, 2) + 0.1)
 barplot(data$DupLin_per, names.arg = data$Program, las = 2, main = "Number of duplicated lines of code per line of code for each program")
 
