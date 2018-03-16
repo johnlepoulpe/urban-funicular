@@ -1,0 +1,19 @@
+Marco:
+- Programs/language
+- Programs/Domain
+- Lines of code/program
+- Duplicated code blocks/program
+- pourcentage duplicated line code/program
+
+Clément:
+- Programs/language
+- Programs/Domain
+- Program/etat malloc
+- Program/etat valgrind
+- duplicated line of code/program
+- ducplicated code blocks/program
+
+* TODO À faire [2/3] 						   :noexport:
+- [X] Question 1 
+- [X] Question 2
+- [ ] Question 3 
