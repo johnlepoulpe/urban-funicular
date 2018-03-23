@@ -1,15 +1,5 @@
 setwd("~/marco/Documents/Cours/sem2/Stat/TPs/Eval/urban-funicular")
 tab <- read.table("programs.txt", header=TRUE, sep= "\t")
-tab_lines = tab[order(tab$LinesOfCode, decreasing = TRUE),]
-
-tab_dupl = tab[order(tab$DuplicatedBlocks, decreasing = TRUE),]
-tab_dupl_noNA = tab_dupl[!is.na(tab_dupl$DuplicatedBlocks),]
-
-tab_C = tab[tab$Language == "C",]
-tab_CO = tab[tab$Language %in% c("C++", "C/C++"),]
-
-tab_short = tab[tab$LinesOfCode <= median(tab$LinesOfCode),]
-tab_long = tab[tab$LinesOfCode > median(tab$LinesOfCode),]
 
 # QUESTION 1
 # tab$assert: number of assert() for 1000 lines of code
@@ -21,15 +11,19 @@ barplot(table(tab$Language), main = "Number of programs written in a given langu
 
 # Modify graphical parameters to fit vertical labels
 op = par(mar = c(9, 4, 4, 2) + 0.1)
-yticks = seq()
 barplot(table(tab$Domain), main = "Number of programs for each scientific domain", las = 2)
 
 ######################################################
+
+tab_lines = tab[order(tab$LinesOfCode, decreasing = TRUE),]
 
 op = par(mar = c(7, 4, 4, 2) + 0.1)
 barplot(tab_lines$LinesOfCode, names.arg = tab_lines$Code, las = 2, main = "Number of lines of code for each program")
 
 ######################################################
+
+tab_dupl = tab[order(tab$DuplicatedBlocks, decreasing = TRUE),]
+tab_dupl_noNA = tab_dupl[!is.na(tab_dupl$DuplicatedBlocks),]
 
 op = par(mar = c(7, 4, 4, 2) + 0.1)
 barplot(tab_dupl_noNA$DuplicatedBlocks, names.arg = tab_dupl_noNA$Code, las = 2, main = "Number of duplicated code blocks for each program")
@@ -48,6 +42,9 @@ barplot(tabP$DupLin_per, names.arg = tabP$Code, las = 2, main = "Number of dupli
 # QUESTION 4
 ######################################################
 
+tab_C = tab[tab$Language == "C",]
+tab_CO = tab[tab$Language %in% c("C++", "C/C++"),]
+
 tabP_C = na.omit(tab_C[, c("Code", "Domain", "DuplicatedLines", "LinesOfCode")])
 tabP_C$DupLin_per = tabP_C$DuplicatedLines / tabP_C$LinesOfCode
 
@@ -60,6 +57,9 @@ t.test(tabP_CO$DupLin_per, conf.level = 0.9)
 
 # QUESTION 5
 ######################################################
+
+tab_short = tab[tab$LinesOfCode <= median(tab$LinesOfCode),]
+tab_long = tab[tab$LinesOfCode > median(tab$LinesOfCode),]
 
 wilcox.test(tab_short$ClangWarning, tab_long$ClangWarning, alternative = "less")
 
