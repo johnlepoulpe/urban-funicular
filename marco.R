@@ -1,7 +1,10 @@
 setwd("~/marco/Documents/Cours/sem2/Stat/TPs/Eval/urban-funicular")
 tab <- read.table("programs.txt", header=TRUE, sep= "\t")
 tab_lines = tab[order(tab$LinesOfCode, decreasing = TRUE),]
-tab_dupl = tab[order(tab$DuplicatedBlocks, decreasing = TRUE),][!is.na(tab_dupl$DuplicatedBlocks),]
+
+tab_dupl = tab[order(tab$DuplicatedBlocks, decreasing = TRUE),]
+tab_dupl_noNA = tab_dupl[!is.na(tab_dupl$DuplicatedBlocks),]
+
 tab_C = tab[tab$Language == "C",]
 tab_CO = tab[tab$Language %in% c("C++", "C/C++"),]
 
@@ -29,7 +32,7 @@ barplot(tab_lines$LinesOfCode, names.arg = tab_lines$Code, las = 2, main = "Numb
 ######################################################
 
 op = par(mar = c(7, 4, 4, 2) + 0.1)
-barplot(tab_dupl$DuplicatedBlocks, names.arg = tab_dupl$Code, las = 2, main = "Number of duplicated code blocks for each program")
+barplot(tab_dupl_noNA$DuplicatedBlocks, names.arg = tab_dupl_noNA$Code, las = 2, main = "Number of duplicated code blocks for each program")
 
 # QUESTION 2
 ######################################################
