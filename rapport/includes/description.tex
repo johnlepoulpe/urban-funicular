@@ -10,8 +10,8 @@ Un premier graphique nous permet de compter le nombre de programme
 
 % \begin{figure}[h]
 %   \centering
-%   \includegraphics[width=.8\textwidth]{../figures/prog_lang.pdf}
-%   \label{fig:prog_lang}
+%   \includegraphics[width=.8\textwidth]{figures/prog_lang.pdf}
+%   \caption\label{fig:prog_lang}
 % \end{figure}
 
 Nous avons ensuite décider de représenter le nombre de lignes de codes
@@ -27,8 +27,8 @@ par exemple).
 
 % \begin{figure}[h]
 %   \centering
-%   \includegraphics[width=.8\textwidth]{../figures/dlin_prog.pdf}
-%   \label{fig:dlin_prog}
+%   \includegraphics[width=.8\textwidth]{figures/dlin_prog.pdf}
+%   \caption{}\label{fig:dlin_prog}
 % \end{figure}
 
 De même, nous avons créer un histogrammes contenant le nombre de blocs
@@ -36,8 +36,8 @@ dupliqués par programme (figure \ref{fig:dbl_prog}).
 
 % \begin{figure}[h]
 %   \centering
-%   \includegraphics[width=.8\textwidth]{../figures/dbl_prog.pdf}
-%   \label{fig:dbl_prog}
+%   \includegraphics[width=.8\textwidth]{figures/dbl_prog.pdf}
+%   \caption{}\label{fig:dbl_prog}
 % \end{figure}
 
 Enfin, nous avons généré un dernier graphique affichant le nombre de
@@ -45,6 +45,27 @@ programmes par domaine (figure \ref{fig:prog_dom}).
 
 % \begin{figure}[h]
 %   \centering
-%   \includegraphics[width=.8\textwidth]{../figures/prog_dom.pdf}
-%   \label{fig:prog_dom}
+%   \includegraphics[width=.8\textwidth]{figures/prog_dom.pdf}
+%   \caption{}\label{fig:prog_dom}
 % \end{figure}
+
+\begin{figure}[!h]
+  \minipage{0.48\textwidth}
+  \includegraphics[width=\linewidth]{figures/prog_lang.pdf}
+  \caption{}\label{fig:prog_lang}
+  \endminipage\hfill
+  \minipage{0.48\textwidth}
+  \includegraphics[width=\linewidth]{figures/dlin_prog.pdf}
+  \caption{}\label{fig:dlin_prog}
+  \endminipage\hfill
+\end{figure}
+\begin{figure}[!h]
+  \minipage{0.48\textwidth}
+  \includegraphics[width=\linewidth]{figures/dbl_prog.pdf}
+  \caption{}\label{fig:dbl_prog}
+  \endminipage\hfill
+  \minipage{0.48\textwidth}
+  \includegraphics[width=\linewidth]{figures/prog_dom.pdf}
+  \caption{}\label{fig:prog_dom}
+  \endminipage\hfill
+\end{figure}
