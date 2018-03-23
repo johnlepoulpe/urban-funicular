@@ -1,0 +1,56 @@
+\documentclass[a4paper,11pt]{article}%
+
+\usepackage{fullpage}%
+\usepackage[T1]{fontenc}%
+\usepackage[utf8]{inputenc}%
+\usepackage[main=francais,english]{babel}% % Adjust the main language
+
+\usepackage{graphicx}%
+\usepackage{url}%
+\usepackage{abstract}%
+
+\usepackage{amsmath}%
+\usepackage{subfig}%
+
+\usepackage{newpxtext, newpxmath}
+
+\usepackage{listings}%
+
+\lstset{%
+  basicstyle=\sffamily,%
+  columns=fullflexible,%
+  language=C++,%       % Adjust according to your current language
+  frame=lb,%
+  frameround=fftf,%
+}%
+
+\parskip=0.5\baselineskip
+
+\sloppy
+
+\begin{document}
+
+\title{Prog2 - Projet 1: Interprète Lisp en C++}
+
+\author{Marco Freire \and Clément Legrand-Duchesne}
+
+\date{27 février 2018}
+
+\maketitle
+
+\begin{abstract}
+  
+  \begin{description}
+    
+  \item[Mots-clefs:] \texttt{Lisp}; C++; interprète; \emph{eval/apply}; environnements; garbage collector; mark-and-sweep
+      
+  \item[Classification ACM:] Software and its engineering: Functional languages
+
+  \end{description}
+\end{abstract}
+
+\renewcommand{\contentsname}{Plan}
+\tableofcontents
+
+
+\end{document}

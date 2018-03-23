@@ -1,0 +1,63 @@
+\section{Interface}
+\label{sec:description}
+
+Dans cette section nous discuterons des différentes interfaces entre
+l'utilisateur et l'interprète.  Nous commencerons par décrire notre
+utilisation de l'analyseur lexical \emph{Flex} et l'analyseur
+syntaxique \emph{Bison}. Puis nous continuerons sur la description du
+\emph{toplevel} qui permet d'initialiser les objets et les paramètres
+utiles au fonctionnement de l'interpréteur mais gère également la
+boucle d'interprétation.
+
+\subsection{Parsing et Lexing}
+
+\paragraph{Nil et t}
+Au sein du lexer nous avons décider d'ajouter la liste vide \emph{()} au token
+définissant NIL car nous avions lors de l'affichage deux façons de retourner
+\emph{()}: soit en imprimant \emph{nil}, soit en imprimant le symbole
+\emph{()}.
+
+Nous avons également ajouté un token pour \emph{t}
+et la règle permettant au parser de reconnaître ce
+token et d'appliquer l'objet \emph{t()} au résultat.
+
+\paragraph{Macro expansion}
+Un des objectifs du projet était de gérer la macro-expansion du
+caractère \emph{'}.  Pour cela nous avons rajouté une règle à
+\emph{Bison} pour transformer une expression du type \emph{'exp} en
+\emph{(quote(exp))}.
+
+\subsection{Toplevel}
+
+\paragraph{Appel à l'interpréteur}
+Nous avons fait le choix d'encapsuler l'appel à l'interprète et la
+boucle d'interprétation dans la fonction \emph{run\_toplevel}.
+
+\paragraph{Initialisation et aboutissement de l'interpréteur}
+Lors de la mise en place du \emph{toplevel}, nous initialisons les structures nécéssaires à
+l'interprète, comme l'environnement, le ramasse-miette et les différents symboles reconnaissables en tant
+qu'instructions \texttt{Lisp} et leurs traductions en tant que
+fonctions \emph{C++}.
+
+De plus, lors de l'arrêt de l'interprétation, nous effectuons une
+opération de nettoyage à la fois au niveau des \emph{Cell}, et des maillons de la liste chainée de l'environnement.\\
+
+\paragraph{Gestion des exceptions}
+Nous avons décidé de gérer la quasi-totalité du rattrapage des erreurs
+dans le \emph{toplevel}, qui, étant situé juste en-dessous du main, nous centralisons la gestion
+d'erreurs et l'affichage des messages destinés à l'utilisateur.
+
+\paragraph{Gestion de la mémoire}
+La gestion du ramasse-miette et de la mémoire se fait également au niveau du
+\emph{toplevel} car on peut y déterminer les états stables de la mémoire (avant
+la lecture d'une expression ou après son évaluation). Ainsi, dans notre boucle
+d'interprétation, nous avons décider d'appeler une directive de nettoyage du
+ramasse-miette avant chaque lecture d'expression.
+
+\paragraph{Gestion des directives haut niveau}
+Dans l'interpréteur \texttt{Lisp}, nous gérons les directives \texttt{setq} et
+\texttt{defun} ou \texttt{exit} (qui permet de quitter le système), de manière
+différente, car elles ne renvoient pas d'objet. Nous interdisons donc à
+l'utilisateur de définir ces directives à l'intérieur d'autres expressions,
+elles sontreconnues et traitées grâce à une structure de \emph{map} associant le
+symbole de la directive à sa fonction.

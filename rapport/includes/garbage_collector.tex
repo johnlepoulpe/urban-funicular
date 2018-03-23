@@ -1,0 +1,76 @@
+\subsection{Contribution}
+Nous avons choisi d'implémenter en extension un ramasse-miette
+utilisant l'algorithme \emph{mark-and-sweep}, représenté par la classe
+\emph{Gc} qui est une classe \textbf{singleton}, c'est-à-dire qu'une
+seule instance de cet object est possible. Cela nous permet d'appeler
+de manière statique notre ramasse-miette.  Dans un premier temps nous
+définirons l'algorithme utilisé et son utilisation dans notre
+implémentation, puis nous discuterons de l'importance du
+ramasse-miette en cas d'arrêt du programme.
+
+\paragraph{Principe de Mark-and-sweep} 
+Un algorithme de ramasse-miette doit effectuer deux tâches
+essentielles: détecter les éléments qui ne sont plus accessibles au
+sein du programme et désallouer ces éléments pour permettre au
+programme de la réutiliser.
+
+\paragraph{Principe de Mark}
+Dans l'algorithme \emph{mark-and-sweep}, la première partie consiste à
+effectuer un parcours en marquant les éléments accessibles dans le
+programme, mais également les éléments accessibles à travers d'autres
+éléments accessibles.
+
+Pour effectuer cette opération dans notre interprète nous avons
+ajouter un champ \emph{marked} dans l'objet \emph{Cell} qui détermine
+si l'objet est accessible ou non. À leur création toutes les
+\emph{Cell} sont considérées comme non accessibles, sauf \emph{Nil} et
+\emph{t} qui sont statiques et ne doivent jamais être supprimées.
+
+Ces éléments marqués sont ajoutés à une structure de tableau dynamique
+définie dans notre objet \emph{Gc}.
+
+
+\paragraph{Parcours en profondeur}
+Pour détecter les éléments accessibles nous devons avoir accès à deux
+données, la localisation de tous les objects en mémoire, et les points
+d'entrées utilisables par le programme.
+
+Pour avoir accès au premier nous avons choisi de surcharger le
+constructeur \emph{New} de \emph{Cell}: nous allouons la zone mémoire
+nécessaire puis nous passons au ramasse-miette l'adresse de cette zone
+mémoire et enfin nous renvoyons cette adresse.
+
+Les points d'entrée du parcours sont quant à eux donnés par
+l'environnement, ce sont en fait les éléments \emph{Cell\_Memory} qui
+y sont stockés.  À partir de chacun de ces points d'entrée nous
+effectuons un parcours en profondeur permettant ainsi de déterminer
+l'ensemble des éléments accessibles.
+
+
+\paragraph{Sweep}
+La deuxième phase de l'algorithme est de supprimer les éléments non
+marqués et d'enlever la marque des objets restants. Les adresses des
+cellules désallouées sont remplacées par \emph{nullptr} dans le
+tableau et ces cases sont considérées comme vides.
+
+Dans notre implémentation nous effectuons un simple parcours linéaire
+de notre tableau contenant les adresses des cellules allouées. Il
+suffit alors d'appeler l'opérateur \emph{delete} sur l'adresse des
+cellules non marquées, et d'enlever la marque des cellules non
+supprimmées.
+
+\paragraph{Défragmentation de la mémoire}
+Cet algorithme a le désavantage de fragmenter la mémoire et ainsi de
+fragmenter notre structure de tableau. Nous corrigeons ceci en
+effectuant un parcours linéaire et en remplissant toutes les cellules
+vides rencontrées par les adresses étant plus loin dans le
+tableau. Nous redéfinissons ensuite la taille du tableau comme
+l'indice de la nouvelle première case vide.
+
+\paragraph{Nettoyer et quitter} 
+Dans un but de minimisation des fuites mémoire lors de la fin du
+programme, nous avons introduit une procédure permettant de désallouer
+l'intégralité des zones mémoire utilisées par les cellules:
+\emph{wipe\_memory()} Cette procédure appelle également
+\emph{wipe\_env()}, dont le fonctionnement est décrit précédemment.
+
