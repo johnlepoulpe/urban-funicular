@@ -1,4 +1,4 @@
-Code	Domain	Language	LinesOfCode	MajorWarning	MinorWraning	ClangWarning	Malloc	Valgrind	Assertions	LinesChecked	FilesChecked	DuplicatedLines	DuplicatedBlocks	FilesWithDuplicatedBlocks
+Code	Domain	Language	LinesOfCode	MajorWarning	MinorWarning	ClangWarning	Malloc	Valgrind	Assertions	LinesChecked	FilesChecked	DuplicatedLines	DuplicatedBlocks	FilesWithDuplicatedBlocks
 PAML	Phylogenetics	C	12908	11	121	242	NoCast	clean	0	22200	17	1210	120	11
 PHYML	Phylogenetics	C	56456	0	0	3188	NoCast	clean	0.16	42786	73	5878	549	32
 MrBayes	Phylogenetics	C	94432	2	0	905	MisCast	invalid & leaks	2.37	70680	19	21862	1680	10
