@@ -1,8 +1,0 @@
-\section*{Introduction}
-
-\begin{itemize}
-\item \texttt{Lisp} est le premier langage interprété de haut niveau, implémenté en 1958 par Steve Russell. Chaque expression \texttt{Lisp} fournie à l'interprète est évaluée, et le résultat est renvoyé à l'utilisateur.
-\item Les langages interprétés permettent de tester rapidement un fragment de code ou des expressions, mais une même expression fournie plusieurs fois à l'interprète sera parsée et réévaluée à chaque fois, contrairement aux langages compilés, pour lesquels le code peut-être executé un nombre indéfini de fois, malgŕe le temps de compilation plus long.
-\item Nous avons implémenté un interprète Lisp totalement fonctionnel en C++, que nous avons complété par l'ajout d'un garbage collector.
-\item Pour réaliser l'interprète, nous avons construit un environnement sous forme de liste chaînée, adaptée au stockage de variables et à la création d'environnements locaux, nous avons ensuite créé les fonctions \emph{eval/apply}, qui constituent le coeur de l'interprète. Le lexer et le parser fournis ont été légèrement modifiés, nous avons finalement crée un garbage collector, reposant sur un vecteur des adresses des cellules mémoire allouées et l'algorithme mark-and-sweep.
-\end{itemize}
