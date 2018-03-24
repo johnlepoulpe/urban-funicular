@@ -123,3 +123,178 @@ Kruskal-Wallis chi-squared = 1.1743, df = 4, p-value = 0.8823
 data:  tabP$DupLin_per by tabP$Domain
 Kruskal-Wallis chi-squared = 8.6167, df = 7, p-value = 0.2814
 
+     Code         Domain Language LinesOfCode MajorWarning MinorWarning ClangWarning    Malloc        Valgrind Assertions LinesChecked
+1    PAML  Phylogenetics        C       12908           11          121          242    NoCast           clean       0.00        22200
+2   PHYML  Phylogenetics        C       56456            0            0         3188    NoCast           clean       0.16        42786
+3 MrBayes  Phylogenetics        C       94432            2            0          905   MisCast invalid & leaks       2.37        70680
+4    SOAP DeNovoAssembly    C/C++       37020          145          628         5750    NoCast           leaks       0.00        27514
+5   Abyss DeNovoAssembly        C       43189            0            0         5820   NoError           clean       1.56        37038
+6      MS    PopGenetics        C        2063           10           22          125 WrongCast           leaks       0.00         1718
+  FilesChecked DuplicatedLines DuplicatedBlocks FilesWithDuplicatedBlocks
+1           17            1210              120                        11
+2           73            5878              549                        32
+3           19           21862             1680                        10
+4          116           10107              527                        72
+5          212            4245              441                        71
+6           24             186               21                         9
+        Code               Domain   Language   LinesOfCode      MajorWarning    MinorWarning     ClangWarning        Malloc 
+ Abyss    : 1   Phylogenetics :3   C    :11   Min.   :  2063   Min.   :  0.0   Min.   :   0.0   Min.   : 125   MisCast  :1  
+ BEAST    : 1   SeqAlign      :3   C++  : 3   1st Qu.: 11456   1st Qu.:  0.0   1st Qu.:   5.5   1st Qu.: 426   NoCast   :9  
+ BP&P     : 1   DeNovoAssembly:2   C/C++: 1   Median : 20268   Median :  7.5   Median :  38.0   Median : 905   NoError  :5  
+ FDPPDIV  : 1   DivTimes      :2   Java : 1   Mean   : 53185   Mean   : 50.0   Mean   : 356.2   Mean   :2042   WrongCast:1  
+ Gadget-2 : 1   PopGenetics   :2              3rd Qu.: 56764   3rd Qu.: 41.5   3rd Qu.: 155.8   3rd Qu.:3047                
+ INDELible: 1   SeqSimulation :2              Max.   :302611   Max.   :345.0   Max.   :3778.0   Max.   :5820                
+ (Other)  :10   (Other)       :2                                                                NA's   :1                   
+            Valgrind   Assertions      LinesChecked     FilesChecked    DuplicatedLines DuplicatedBlocks FilesWithDuplicatedBlocks
+ clean          :5   Min.   :0.0000   Min.   :  1718   Min.   :   5.0   Min.   :  186   Min.   :  21.0   Min.   :   3.0           
+ invalid        :1   1st Qu.:0.0000   1st Qu.:  9805   1st Qu.:  18.0   1st Qu.:  856   1st Qu.:  81.0   1st Qu.:   7.5           
+ invalid & leaks:1   Median :0.0800   Median : 22200   Median :  44.0   Median : 4245   Median : 441.0   Median :  31.0           
+ leaks          :7   Mean   :0.9988   Mean   : 41009   Mean   : 215.4   Mean   :11138   Mean   : 796.9   Mean   : 104.3           
+ probably clean :1   3rd Qu.:0.7200   3rd Qu.: 43916   3rd Qu.:  94.5   3rd Qu.:14726   3rd Qu.: 937.0   3rd Qu.:  58.5           
+ NA's           :1   Max.   :9.1900   Max.   :228316   Max.   :2336.0   Max.   :64024   Max.   :4786.0   Max.   :1151.0           
+                                      NA's   :1        NA's   :1        NA's   :1       NA's   :1        NA's   :1                
+RStudioGD 
+        2 
+RStudioGD 
+        2 
+RStudioGD 
+        2 
+RStudioGD 
+        2 
+RStudioGD 
+        2 
+RStudioGD 
+        2 
+
+	Wilcoxon rank sum test
+
+data:  tabP_CPP$DuplicatedLines and tabP_C$DuplicatedLines
+W = 6, p-value = 0.1608
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test
+
+data:  tabP_C$DupLin_per and tabP_CPP$DupLin_per
+W = 26, p-value = 0.07692
+alternative hypothesis: true location shift is not equal to 0
+
+
+	One Sample t-test
+
+data:  tabP_C$DupLin_per
+t = 4.7866, df = 9, p-value = 0.0009921
+alternative hypothesis: true mean is not equal to 0
+90 percent confidence interval:
+ 12.22694 27.40435
+sample estimates:
+mean of x 
+ 19.81564 
+
+
+	One Sample t-test
+
+data:  tabP_CO$DupLin_per
+t = 2.6511, df = 3, p-value = 0.07692
+alternative hypothesis: true mean is not equal to 0
+90 percent confidence interval:
+  1.264158 21.246497
+sample estimates:
+mean of x 
+ 11.25533 
+
+
+	Wilcoxon rank sum test
+
+data:  tab_short$ClangWarning and tab_long$ClangWarning
+W = 2, p-value = 0.0006216
+alternative hypothesis: true location shift is less than 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  tab_short$MajorWarning and tab_long$MajorWarning
+W = 16, p-value = 0.08464
+alternative hypothesis: true location shift is less than 0
+
+
+	Shapiro-Wilk normality test
+
+data:  tab_Clang$LinesOfCode
+W = 0.761, p-value = 0.001212
+
+
+	Shapiro-Wilk normality test
+
+data:  tab_Clang$ClangWarning[na.rm = TRUE]
+W = 0.80723, p-value = 0.004559
+
+
+	Pearson's product-moment correlation
+
+data:  tab_Clang$ClangWarning and tab_Clang$LinesOfCode
+t = 2.4192, df = 13, p-value = 0.03095
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.06284975 0.83197496
+sample estimates:
+     cor 
+0.557174 
+
+
+	Spearman's rank correlation rho
+
+data:  tab_Clang$ClangWarning and tab_Clang$LinesOfCode
+S = 140, p-value = 0.001907
+alternative hypothesis: true rho is not equal to 0
+sample estimates:
+ rho 
+0.75 
+
+RStudioGD 
+        2 
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  Clean$MajorWarning and Leaks$MajorWarning
+W = 15, p-value = 0.5696
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  Clean$MinorWarning and Leaks$MinorWarning
+W = 11.5, p-value = 1
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test
+
+data:  Clean$ClangWarning and Leaks$ClangWarning
+W = 9, p-value = 0.6095
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Kruskal-Wallis rank sum test
+
+data:  tabW$MajorWarning by tabW$Valgrind
+Kruskal-Wallis chi-squared = 7.6145, df = 4, p-value = 0.1068
+
+
+	Kruskal-Wallis rank sum test
+
+data:  tabW$MinorWarning by tabW$Valgrind
+Kruskal-Wallis chi-squared = 3.9281, df = 4, p-value = 0.4158
+
+
+	Kruskal-Wallis rank sum test
+
+data:  tabW$ClangWarning by tabW$Valgrind
+Kruskal-Wallis chi-squared = 1.1743, df = 4, p-value = 0.8823
+
+
+	Kruskal-Wallis rank sum test
+
+data:  tabP$DupLin_per by tabP$Domain
+Kruskal-Wallis chi-squared = 8.6167, df = 7, p-value = 0.2814
+
