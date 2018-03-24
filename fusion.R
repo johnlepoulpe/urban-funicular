@@ -76,9 +76,17 @@ dev.off()
 tabP_C = tabP[tab$Language == "C",]
 tabP_CPP = tabP[tab$Language == "C++",]
 
-wilcox.test(tabP_CPP$DuplicatedLines, tabP_C$DuplicatedLines)
+wilcox.test(tabP_C$DuplicatedLines, tabP_CPP$DuplicatedLines)
 wilcox.test(tabP_C$DupLin_per, tabP_CPP$DupLin_per)
 
+pdf('rapport/figures/pdlin_lang.pdf')
+boxplot(tabP_C$DupLin_per, tabP_CPP$DupLin_per,
+        na.rm = TRUE, col = c("blue", "green"),
+        xlab = "Langage", 
+        ylab = "Pourcetage de lignes dupliquées", 
+        names = c("C", "C++"),
+        main = "Pourcentage de lignes dupliquées en fonction \n du langage de programmation")
+dev.off()
 ###############################################################################
 
 # Question 4
@@ -137,11 +145,21 @@ NClean = tabW_CL[tabW_CL$Valgrind != "clean",]
 
 # > On peut affirmer qu'il existe une différence significative entre les
 # > moyennes au risque de 5% pour les major warnings
-wilcox.test(Clean$MajorWarning, NClean$MajorWarning)
-wilcox.test(Clean$MinorWarning, NClean$MinorWarning)
-wilcox.test(Clean$ClangWarning, NClean$ClangWarning)
+wilcox.test(Clean$MajorWarning, NClean$MajorWarning, alternative = "less")
+wilcox.test(Clean$MinorWarning, NClean$MinorWarning, alternative = "less")
+wilcox.test(Clean$ClangWarning, NClean$ClangWarning, alternative = "less")
+
+pdf('rapport/figures/MW_valgr.pdf')
+boxplot(Clean$MajorWarning, NClean$MajorWarning,
+        col = c("blue", "green"),
+        xlab = "gestion mémoire", 
+        ylab = "Nombre de warning majeur", 
+        names = c("Clean", "Not clean"),
+        main = "Nombre de warning majeur en fonction \n de la qualité de la gestion mémoire")
+dev.off()
 
 ## Influence du domaine scientifique sur le pourcentage de lignes dupliquées
 
 # Pas de différence des moyennes significative au risque de 5%
 kruskal.test(tabP$DupLin_per ~ tabP$Domain)
+
