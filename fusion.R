@@ -130,23 +130,16 @@ op = par(mar = c(5, 4, 4, 2) + 0.1)
 tabW = na.omit(tab[, c("MajorWarning", "MinorWarning", "ClangWarning", "Valgrind")])
 
 tabW_CL = tabW[tabW$Valgrind == "clean" | tabW$Valgrind == "leaks",]
-Clean = tabW_CL[tabW$Valgrind == "clean",]
-Leaks = tabW_CL[tabW$Valgrind == "leaks",]
+Clean = tabW_CL[tabW_CL$Valgrind == "clean",]
+NClean = tabW_CL[tabW_CL$Valgrind != "clean",]
 
-# Comparaison des moyennes des programmes ayant une évaluation valgrind "CLEAN" et "LEAKS"
+# Comparaison des moyennes des programmes ayant une évaluation valgrind "CLEAN" et les autres
 
 # > On peut affirmer qu'il existe une différence significative entre les
 # > moyennes au risque de 5% pour les major warnings
-wilcox.test(Clean$MajorWarning, Leaks$MajorWarning)
-wilcox.test(Clean$MinorWarning, Leaks$MinorWarning)
-wilcox.test(Clean$ClangWarning, Leaks$ClangWarning)
-
-# > Pas de différence des moyennes significative au risque de 5% en considérant
-# > toutes les évaluations valgrind possibles
-# Données ni normales ni homoscédastiques
-kruskal.test(tabW$MajorWarning ~ tabW$Valgrind)
-kruskal.test(tabW$MinorWarning ~ tabW$Valgrind)
-kruskal.test(tabW$ClangWarning ~ tabW$Valgrind)
+wilcox.test(Clean$MajorWarning, NClean$MajorWarning)
+wilcox.test(Clean$MinorWarning, NClean$MinorWarning)
+wilcox.test(Clean$ClangWarning, NClean$ClangWarning)
 
 ## Influence du domaine scientifique sur le pourcentage de lignes dupliquées
 
