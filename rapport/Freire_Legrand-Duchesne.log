@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.26)  23 MAR 2018 14:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.26)  24 MAR 2018 11:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -752,59 +752,77 @@ File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2015/06/04 1.6 listings language file
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2015/06/04 1.6 listings language file
 )
-No file Freire_Legrand-Duchesne.aux.
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang3.sty
+File: lstlang3.sty 2015/06/04 1.6 listings language file
+)
+(./Freire_Legrand-Duchesne.aux)
 \openout1 = `Freire_Legrand-Duchesne.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/npxmi/m/it on input line 31.
-LaTeX Font Info:    Try loading font information for OML+npxmi on input line 31
+LaTeX Font Info:    Checking defaults for OML/npxmi/m/it on input line 52.
+LaTeX Font Info:    Try loading font information for OML+npxmi on input line 52
 .
+
 (/usr/share/texlive/texmf-dist/tex/latex/newpx/omlnpxmi.fd
 File: omlnpxmi.fd 2013/03/21 Fontinst v1.933 font definitions for OML/npxmi.
 )
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMS/npxsy/m/n on input line 31.
-LaTeX Font Info:    Try loading font information for OMS+npxsy on input line 31
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/npxsy/m/n on input line 52.
+LaTeX Font Info:    Try loading font information for OMS+npxsy on input line 52
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/newpx/omsnpxsy.fd
 File: omsnpxsy.fd 2013/03/24 Fontinst v1.933 font definitions for OMS/npxsy.
 )
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for U/npxexa/m/n on input line 31.
-LaTeX Font Info:    Try loading font information for U+npxexa on input line 31.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/npxexa/m/n on input line 52.
+LaTeX Font Info:    Try loading font information for U+npxexa on input line 52.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/newpx/unpxexa.fd
 File: unpxexa.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxexa.
 )
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 31.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 52.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 52.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for LMX/npxexx/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Info: Redefining \degres on input line 31.
-LaTeX Info: Redefining \dots on input line 31.
-LaTeX Info: Redefining \up on input line 31.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for LMX/npxexx/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Info: Redefining \degres on input line 52.
+LaTeX Info: Redefining \dots on input line 52.
+LaTeX Info: Redefining \up on input line 52.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -875,87 +893,156 @@ Package caption Info: End \AtBeginDocument code.
 \c@mv@boldtabular=\count131
 \c@lstlisting=\count132
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 17.28pt on input line 39.
+(Font)              scaled to size 17.28pt on input line 60.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 12.0pt on input line 39.
-LaTeX Font Info:    Try loading font information for OT1+zpltlf on input line 3
-9.
+(Font)              scaled to size 12.0pt on input line 60.
+LaTeX Font Info:    Try loading font information for OT1+zpltlf on input line 6
+0.
 
 (/usr/share/texlive/texmf-dist/tex/latex/newpx/ot1zpltlf.fd
 File: ot1zpltlf.fd 2015/01/17 v1.0 font definition file for OT1/zpl/tlf
 )
 LaTeX Font Info:    Font shape `OT1/zpltlf/m/n' will be
-(Font)              scaled to size 12.0pt on input line 39.
+(Font)              scaled to size 12.0pt on input line 60.
 LaTeX Font Info:    Font shape `OT1/zpltlf/m/n' will be
-(Font)              scaled to size 8.8pt on input line 39.
+(Font)              scaled to size 8.8pt on input line 60.
 LaTeX Font Info:    Font shape `OT1/zpltlf/m/n' will be
-(Font)              scaled to size 6.6pt on input line 39.
-LaTeX Font Info:    Try loading font information for U+npxmia on input line 39.
+(Font)              scaled to size 6.6pt on input line 60.
+LaTeX Font Info:    Try loading font information for U+npxmia on input line 60.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/newpx/unpxmia.fd
 File: unpxmia.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxmia.
 )
-LaTeX Font Info:    Try loading font information for U+npxsym on input line 39.
+LaTeX Font Info:    Try loading font information for U+npxsym on input line 60.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/newpx/unpxsym.fd
 File: unpxsym.fd 2015/03/21 Fontinst v1.933 font definitions for U/npxsym.
 )
-LaTeX Font Info:    Try loading font information for U+npxsyc on input line 39.
+LaTeX Font Info:    Try loading font information for U+npxsyc on input line 60.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/newpx/unpxsyc.fd
 File: unpxsyc.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxsyc.
 )
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 10.0pt on input line 41.
+(Font)              scaled to size 10.0pt on input line 62.
 LaTeX Font Info:    Font shape `T1/zpltlf/bx/n' in size <10> not available
-(Font)              Font shape `T1/zpltlf/b/n' tried instead on input line 41.
+(Font)              Font shape `T1/zpltlf/b/n' tried instead on input line 62.
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
-(Font)              scaled to size 10.0pt on input line 41.
-LaTeX Font Info:    Try loading font information for T1+npxtt on input line 45.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/newpx/t1npxtt.fd
-File: t1npxtt.fd 2000/12/14 v1.0
-)
-LaTeX Font Info:    Font shape `T1/npxtt/m/n' will be
-(Font)              scaled to size 10.0pt on input line 45.
-LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
-(Font)              scaled to size 10.0pt on input line 45.
+(Font)              scaled to size 10.0pt on input line 62.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 14.4pt on input line 53.
+(Font)              scaled to size 14.4pt on input line 73.
 LaTeX Font Info:    Font shape `T1/zpltlf/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/zpltlf/b/n' tried instead on input line 53.
+(Font)              Font shape `T1/zpltlf/b/n' tried instead on input line 73.
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
-(Font)              scaled to size 14.4pt on input line 53.
+(Font)              scaled to size 14.4pt on input line 73.
 
-No file Freire_Legrand-Duchesne.toc.
+(./Freire_Legrand-Duchesne.toc
+LaTeX Font Info:    Font shape `T1/zpltlf/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/zpltlf/b/n' tried instead on input line 2.
+LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
+(Font)              scaled to size 10.95pt on input line 2.
+LaTeX Font Info:    Font shape `OT1/zpltlf/m/n' will be
+(Font)              scaled to size 10.95pt on input line 8.
+LaTeX Font Info:    Font shape `OT1/zpltlf/m/n' will be
+(Font)              scaled to size 8.0pt on input line 8.
+LaTeX Font Info:    Font shape `OT1/zpltlf/m/n' will be
+(Font)              scaled to size 6.1pt on input line 8.
+)
 \tf@toc=\write3
 \openout3 = `Freire_Legrand-Duchesne.toc'.
 
-[1
+ (./includes/description.tex
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-(./Freire_Legrand-Duchesne.aux) ) 
+LaTeX Warning: Reference `prog_lang' on page 1 undefined on input line 9.
+
+LaTeX Font Info:    Try loading font information for T1+qhv on input line 20.
+(/usr/share/texmf/tex/latex/tex-gyre/t1qhv.fd
+File: t1qhv.fd 2009/09/25 v1.2 font definition file for T1/qhv
+)
+LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
+(Font)              scaled to size 10.29301pt on input line 20.
+LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
+(Font)              scaled to size 10.95pt on input line 25.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] <figures/prog_lang.pdf, id
+=8, 505.89pt x 505.89pt>
+File: figures/prog_lang.pdf Graphic file (type pdf)
+
+<use figures/prog_lang.pdf>
+Package pdftex.def Info: figures/prog_lang.pdf used on input line 54.
+(pdftex.def)             Requested size: 217.42265pt x 217.4281pt.
+LaTeX Font Info:    Font shape `T1/zpltlf/m/sc' will be
+(Font)              scaled to size 10.95pt on input line 55.
+ <figures/dlin_prog.pdf, id=9, 505.89pt x 505.89pt>
+File: figures/dlin_prog.pdf Graphic file (type pdf)
+
+<use figures/dlin_prog.pdf>
+Package pdftex.def Info: figures/dlin_prog.pdf used on input line 58.
+(pdftex.def)             Requested size: 217.42265pt x 217.4281pt.
+ <figures/dbl_prog.pdf, id=10, 505.89pt x 505.89pt>
+File: figures/dbl_prog.pdf Graphic file (type pdf)
+
+<use figures/dbl_prog.pdf>
+Package pdftex.def Info: figures/dbl_prog.pdf used on input line 64.
+(pdftex.def)             Requested size: 217.42265pt x 217.4281pt.
+ <figures/prog_dom.pdf, id=11, 505.89pt x 505.89pt>
+File: figures/prog_dom.pdf Graphic file (type pdf)
+
+<use figures/prog_dom.pdf>
+Package pdftex.def Info: figures/prog_dom.pdf used on input line 68.
+(pdftex.def)             Requested size: 217.42265pt x 217.4281pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) (./includes/question2.tex
+
+LaTeX Warning: Reference `pdlin_prog' on page 2 undefined on input line 10.
+
+) (./includes/question3.tex [2 <./figures/prog_lang.pdf> <./figures/dlin_prog.p
+df>]) (./includes/question4.tex) (./includes/question5.tex [3 <./figures/dbl_pr
+og.pdf> <./figures/prog_dom.pdf>])
+LaTeX Font Info:    Font shape `T1/zpltlf/bx/n' in size <12> not available
+(Font)              Font shape `T1/zpltlf/b/n' tried instead on input line 93.
+LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
+(Font)              scaled to size 12.0pt on input line 93.
+ (./includes/question6-1.tex)
+(./includes/question6-2.tex) (../fusion.R [4] [5]
+Overfull \hbox (0.76787pt too wide) in paragraph at lines 117--119
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][] 
+ []
+
+[6]) [7] (./Freire_Legrand-Duchesne.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 8603 strings out of 494936
- 121363 string characters out of 6179808
- 195986 words of memory out of 5000000
- 11725 multiletter control sequences out of 15000+600000
- 39526 words of font info for 49 fonts, out of 8000000 for 9000
+ 10291 strings out of 494936
+ 139623 string characters out of 6179808
+ 258636 words of memory out of 5000000
+ 13367 multiletter control sequences out of 15000+600000
+ 62084 words of font info for 77 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 47i,6n,97p,859b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips
-/newtx/ntx-ec-tlf.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/txfonts
-/t1xtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplb.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
-Output written on Freire_Legrand-Duchesne.pdf (1 page, 61908 bytes).
+ 44i,8n,75p,859b,1803s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-sc.enc}{/usr/
+share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{/usr/share/texmf
+/fonts/enc/dvips/tex-gyre/q-ec.enc}</usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/latxfont/lcircle1.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/pxfonts/pxsy.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qhvr.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/newpx/zplri.pfb>
+Output written on Freire_Legrand-Duchesne.pdf (7 pages, 133428 bytes).
 PDF statistics:
- 25 PDF objects out of 1000 (max. 8388607)
- 17 compressed objects within 1 object stream
+ 85 PDF objects out of 1000 (max. 8388607)
+ 61 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

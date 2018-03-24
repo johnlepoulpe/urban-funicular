@@ -1,0 +1,29 @@
+Nous vouons explorer l'hypothèse selon laquelle les codes longs
+comporteraient plus de warnings à la compilation que les courts. Nous
+avons commencé a séparer notre table en deux, l'une pour les
+programmes au nombre de lignes de codes inférieur à la médiane et
+l'autre pour les autres programmes. 
+
+Nous avons ensuite effectué trois test de Mann Whitney, un pour chaque
+type de warning (Clang, MinorWarning de gcc, MajorWarning de gcc),
+avec pour hypothèse nulle ``Il n'y a pas de différence significatives
+du nombre de warning à la compilation entre les programmes de
+longueurs supérieure et inférieure à la médiane.''. Nous avons pour
+cela encore une fois supposé que les échantillons considérés suivaient
+une loi normale de variance identique. Lors du test, nous avons passé
+\emph{alternative = "less"} en argument à la fonction
+\emph{wilcox.test}, cela correspond au fait que nous nous attendons à
+ce que le nombre de warning soit supérieur pour pour les programmes
+long.
+
+Pour les Warning Clang, la p-value retournée par le test est de
+0.0006216, au risque d'erreur 5\%, nous pouvons donc rejeter
+l'hypothèse nulle. Nous en concluons que le nombre de warning Clang
+est supérieur pour les programmes longs.
+
+Pour les Warning gcc, la p-value retournée par le test est de 0.6039
+et 0.05896 pour les warning mineurs et majeurs respéctivement. Au
+risque d'erreur 5\%, nous ne pouvons donc pas rejeter l'hypothèse nulle. Nous
+en concluons que le nombre de warning gcc n'est pas sensiblement supérieur pour les
+programmes longs.
+

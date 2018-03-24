@@ -1,1 +1,9 @@
 \select@language {french}
+\contentsline {section}{\numberline {1}Description du jeu de donn\IeC {\'e}es}{1}
+\contentsline {section}{\numberline {2}Pourcentage de lignes de code dupliqu\IeC {\'e}es}{2}
+\contentsline {section}{\numberline {3}Comparaison du nombre de lignes duppliqu\IeC {\'e}es en C et en C++}{2}
+\contentsline {section}{\numberline {4}Intervalle de confiance du taux de lignes duppliqu\IeC {\'e}es}{3}
+\contentsline {section}{\numberline {5}Lien entre la longueur du code et le nombre de warning \IeC {\`a} la compilation}{3}
+\contentsline {section}{\numberline {6}Questions personnelles}{4}
+\contentsline {subsection}{\numberline {6.1}Lien entre le nombre et le type de warning \IeC {\`a} la compilation et la qualit\IeC {\'e} de la gestion m\IeC {\'e}moire.}{4}
+\contentsline {subsection}{\numberline {6.2}Autre question}{4}

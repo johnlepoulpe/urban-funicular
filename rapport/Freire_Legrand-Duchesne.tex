@@ -15,6 +15,10 @@
 \usepackage{newpxtext, newpxmath}
 
 \usepackage{listings}%
+\usepackage{xcolor}%
+% \definecolor{blue}{0,0,0.8}
+% \definecolor{green}{0,0.7,0}
+% \definecolor{blue}{0.58,0,0.82}
 
 \lstset{%
   basicstyle=\sffamily,%
@@ -36,6 +40,9 @@
   {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
   {€}{{\euro}}1 {£}{{\pounds}}1 {«}{{\guillemotleft}}1
   {»}{{\guillemotright}}1 {ñ}{{\~n}}1 {Ñ}{{\~N}}1 {¿}{{?`}}1,%
+  keywordstyle = \color{red},%
+  commentstyle = \color{blue},%
+  stringstyle = \color{purple},%
 }%
 
 \parskip=0.5\baselineskip
@@ -70,6 +77,23 @@
 
 \section{Pourcentage de lignes de code dupliquées}
 \input{includes/question2.tex}
+
+\section{Comparaison du nombre de lignes duppliquées en C et en C++}
+\input{includes/question3.tex}
+
+\section{Intervalle de confiance du taux de lignes duppliquées}
+\input{includes/question4.tex}
+
+\section{Lien entre la longueur du code et le nombre de warning à la
+  compilation}
+\input{includes/question5.tex}
+
+\section{Questions personnelles}
+\subsection{Lien entre le nombre et le type de warning à la
+  compilation et la qualité de la gestion mémoire.}
+\input{includes/question6-1.tex}
+\subsection{Autre question}
+\input{includes/question6-2.tex}
 
 \section*{Annexe}
 \lstinputlisting{../fusion.R}

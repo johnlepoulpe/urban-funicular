@@ -1,0 +1,29 @@
+Pour effectuer un comparaison sur le nombre de lignes de codes des
+programmes C et C++, il nous faut faire un test de Mann-Whitney (grâce
+à la fonction \emph{wilcox.test} en R. Pour que ce test soit valide,
+nous sommes obligés de supposer que les deux échantillons considérés
+suivent une loi normale, de variance identique. De plus, les mesures
+sont bien idépendantes les unes des autres.  
+
+Nous faisons pour hypothèse nulle ``Il n'y a pas de différences
+significatives du nombre de lignes de code dupliquées en fonction du
+langage de programmation utilisé.''. La p-value retournée par le test
+est de 0.94, au risque d'erreur 5\%, nous ne pouvons donc pas rejeter
+l'hypothèse nulle. Nous en concluons que le nombre de lignes de codes
+duppliquées et le langage de programmation sont décorrélés.
+
+Nous noterons que la longueur des codes biaise l'interprétation de la
+mesure: en effet, plus un code est long, plus le nombre de lignes
+duppliquées a de chance d'être élevé, aussi, un grand nombre de lignes
+de codes duppliquées ne reflète pas une mauvaise technique de
+programmation, tout dépend de la taille du code!  Nous avons donc
+aussi comparé le pourcentage des lignes de codes écrits en C et en
+C++.  
+
+L'hypothèse nulle devient ``Il n'y a pas de différences significatives
+du pourcentage de lignes de code dupliquées en fonction du langage de
+programmation utilisé.''.  La p-value retournée par le test est de
+0.41, au risque d'erreur 5\%, nous ne pouvons donc pas rejeter
+l'hypothèse nulle. Nous en concluons que le langage de programmation et
+le pourcentage de lignes de code dupliquées sont décorréllés.
+

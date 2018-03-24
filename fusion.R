@@ -60,7 +60,7 @@ dev.off()
 # Question 2
 
 tabP = na.omit(tab[, c("Code", "Domain", "Language", "DuplicatedLines", "LinesOfCode")])
-tabP$DupLin_per = tabP$DuplicatedLines / tabP$LinesOfCode
+tabP$DupLin_per = tabP$DuplicatedLines / tabP$LinesOfCode * 100
 tabP = tabP[order(tabP$DupLin_per, decreasing = TRUE),]
 
 ## Pourcentage de lignes dupliquées par programme
@@ -78,6 +78,7 @@ dev.off()
 tabP_C = tabP[tab$Language == "C",]
 tabP_CPP = tabP[tab$Language == "C++",]
 
+wilcox.test(tabP_CPP$DuplicatedLines, tabP_C$DuplicatedLines)
 wilcox.test(tabP_C$DupLin_per, tabP_CPP$DupLin_per)
 
 ###############################################################################
@@ -98,6 +99,8 @@ tab_short = tab[tab$LinesOfCode <= median(tab$LinesOfCode),]
 tab_long = tab[tab$LinesOfCode > median(tab$LinesOfCode),]
 
 wilcox.test(tab_short$ClangWarning, tab_long$ClangWarning, alternative = "less")
+wilcox.test(tab_short$MinorWraning, tab_long$MinorWraning, alternative = "less")
+wilcox.test(tab_short$MajorWarning, tab_long$MajorWarning, alternative = "less")
 
 # Reset graphic parameters
 op = par(mar = c(5, 4, 4, 2) + 0.1)

@@ -32,7 +32,7 @@
 
 \title{Prog2 - Projet 1: Interprète Lisp en C++}
 
-\author{Romain Ferrand \and Marco Freire \and Clément Legrand-Duchesne}
+\author{Marco Freire \and Clément Legrand-Duchesne}
 
 \date{27 février 2018}
 
@@ -40,8 +40,6 @@
 
 \begin{abstract}
   
-  Dans ce rapport est expliquée notre démarche de construction d'un interprète \texttt{Lisp} en C++ et son fonctionnement.
-  Nous avons ainsi crée un interprète basé sur le modèle \emph{eval/apply}, avec une gestion des environnements adaptée au passage d'un garbage collector que nous avons créé en extension, suivant l'algorithme mark-and-sweep.
   \begin{description}
     
   \item[Mots-clefs:] \texttt{Lisp}; C++; interprète; \emph{eval/apply}; environnements; garbage collector; mark-and-sweep
@@ -54,34 +52,5 @@
 \renewcommand{\contentsname}{Plan}
 \tableofcontents
 
-\vspace{2cm}
-\textbf{Avertissement}: Nous ne rentrerons pas en détail sur le fonctionnement des structures, classes et méthodes figurant dans le code fourni en début de projet.
-
-%THIS FILE: Bibliographie?
-
-\input{includes/introduction.tex}% corrected
-
-\section{Partie obligatoire: Interprète Lisp}
-
-\input{includes/environnement.tex}% missingref, corrected
-
-\input{includes/eval.tex}% corrected
-
-\input{includes/interface.tex}% en cours
-
-\input{includes/validation.tex}% en cours
-
-\section{Extension: Garbage Collector}
-
-\input{includes/garbage_collector.tex}% corrected
-\input{includes/validation_gc.tex}% en cours
-
-\input{includes/conclusion.tex}% corrected
-
-\input{includes/bull_shit.tex}% corrected
-
-
-\section{Annexe}
-\input{includes/figures.tex}
 
 \end{document}
