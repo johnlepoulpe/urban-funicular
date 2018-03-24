@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.26)  24 MAR 2018 11:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.26)  24 MAR 2018 16:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -954,95 +954,142 @@ LaTeX Font Info:    Font shape `OT1/zpltlf/m/n' will be
 \tf@toc=\write3
 \openout3 = `Freire_Legrand-Duchesne.toc'.
 
- (./includes/description.tex
+ [1
 
-LaTeX Warning: Reference `prog_lang' on page 1 undefined on input line 9.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./includes/description.te
+x
+LaTeX Font Info:    Try loading font information for T1+qhv on input line 13.
 
-LaTeX Font Info:    Try loading font information for T1+qhv on input line 20.
 (/usr/share/texmf/tex/latex/tex-gyre/t1qhv.fd
 File: t1qhv.fd 2009/09/25 v1.2 font definition file for T1/qhv
 )
 LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
-(Font)              scaled to size 10.29301pt on input line 20.
+(Font)              scaled to size 10.29301pt on input line 13.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
-(Font)              scaled to size 10.95pt on input line 25.
- [1
+(Font)              scaled to size 10.95pt on input line 22.
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] <figures/prog_lang.pdf, id
-=8, 505.89pt x 505.89pt>
+<figures/prog_lang.pdf, id=8, 505.89pt x 505.89pt>
 File: figures/prog_lang.pdf Graphic file (type pdf)
-
-<use figures/prog_lang.pdf>
-Package pdftex.def Info: figures/prog_lang.pdf used on input line 54.
+ <use figures/prog_lang.pdf>
+Package pdftex.def Info: figures/prog_lang.pdf used on input line 30.
 (pdftex.def)             Requested size: 217.42265pt x 217.4281pt.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/sc' will be
-(Font)              scaled to size 10.95pt on input line 55.
- <figures/dlin_prog.pdf, id=9, 505.89pt x 505.89pt>
-File: figures/dlin_prog.pdf Graphic file (type pdf)
+(Font)              scaled to size 10.95pt on input line 31.
 
-<use figures/dlin_prog.pdf>
-Package pdftex.def Info: figures/dlin_prog.pdf used on input line 58.
+<figures/lin_prog.pdf, id=9, 505.89pt x 505.89pt>
+File: figures/lin_prog.pdf Graphic file (type pdf)
+ <use figures/lin_prog.pdf>
+Package pdftex.def Info: figures/lin_prog.pdf used on input line 34.
 (pdftex.def)             Requested size: 217.42265pt x 217.4281pt.
- <figures/dbl_prog.pdf, id=10, 505.89pt x 505.89pt>
+
+<figures/dbl_prog.pdf, id=10, 505.89pt x 505.89pt>
 File: figures/dbl_prog.pdf Graphic file (type pdf)
-
-<use figures/dbl_prog.pdf>
-Package pdftex.def Info: figures/dbl_prog.pdf used on input line 64.
+ <use figures/dbl_prog.pdf>
+Package pdftex.def Info: figures/dbl_prog.pdf used on input line 38.
 (pdftex.def)             Requested size: 217.42265pt x 217.4281pt.
- <figures/prog_dom.pdf, id=11, 505.89pt x 505.89pt>
-File: figures/prog_dom.pdf Graphic file (type pdf)
 
-<use figures/prog_dom.pdf>
-Package pdftex.def Info: figures/prog_dom.pdf used on input line 68.
+<figures/prog_dom.pdf, id=11, 505.89pt x 505.89pt>
+File: figures/prog_dom.pdf Graphic file (type pdf)
+ <use figures/prog_dom.pdf>
+Package pdftex.def Info: figures/prog_dom.pdf used on input line 42.
 (pdftex.def)             Requested size: 217.42265pt x 217.4281pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 ) (./includes/question2.tex
+<figures/dlin_prog.pdf, id=12, 505.89pt x 505.89pt>
+File: figures/dlin_prog.pdf Graphic file (type pdf)
 
-LaTeX Warning: Reference `pdlin_prog' on page 2 undefined on input line 10.
+<use figures/dlin_prog.pdf>
+Package pdftex.def Info: figures/dlin_prog.pdf used on input line 15.
+(pdftex.def)             Requested size: 217.42265pt x 217.4281pt.
 
-) (./includes/question3.tex [2 <./figures/prog_lang.pdf> <./figures/dlin_prog.p
-df>]) (./includes/question4.tex) (./includes/question5.tex [3 <./figures/dbl_pr
-og.pdf> <./figures/prog_dom.pdf>])
+<figures/pdlin_prog.pdf, id=13, 505.89pt x 505.89pt>
+File: figures/pdlin_prog.pdf Graphic file (type pdf)
+
+<use figures/pdlin_prog.pdf>
+Package pdftex.def Info: figures/pdlin_prog.pdf used on input line 19.
+(pdftex.def)             Requested size: 217.42265pt x 217.4281pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) (./includes/question3.tex [2
+
+]) (./includes/question4.tex) [3 <./figures/prog_lang.pdf> <./figures/lin_prog.
+pdf> <./figures/dbl_prog.pdf> <./figures/prog_dom.pdf>] (./includes/question5.t
+ex [4 <./figures/dlin_prog.pdf> <./figures/pdlin_prog.pdf>] <figures/clang_lin.
+pdf, id=62, 505.89pt x 505.89pt>
+File: figures/clang_lin.pdf Graphic file (type pdf)
+
+<use figures/clang_lin.pdf>
+Package pdftex.def Info: figures/clang_lin.pdf used on input line 52.
+(pdftex.def)             Requested size: 217.42265pt x 217.4281pt.
+)
 LaTeX Font Info:    Font shape `T1/zpltlf/bx/n' in size <12> not available
-(Font)              Font shape `T1/zpltlf/b/n' tried instead on input line 93.
+(Font)              Font shape `T1/zpltlf/b/n' tried instead on input line 94.
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
-(Font)              scaled to size 12.0pt on input line 93.
- (./includes/question6-1.tex)
-(./includes/question6-2.tex) (../fusion.R [4] [5]
-Overfull \hbox (0.76787pt too wide) in paragraph at lines 117--119
+(Font)              scaled to size 12.0pt on input line 94.
+ (./includes/question6-1.tex [5 <./figures/clang_lin.pdf>] <figures/MW_valgr.pd
+f, id=73, 505.89pt x 505.89pt>
+File: figures/MW_valgr.pdf Graphic file (type pdf)
+
+<use figures/MW_valgr.pdf>
+Package pdftex.def Info: figures/MW_valgr.pdf used on input line 22.
+(pdftex.def)             Requested size: 217.42265pt x 217.4281pt.
+) (./includes/question6-2.tex) [6 <./figures/MW_valgr.pdf>] (../fusion.R [7
+
+]
+LaTeX Font Info:    Try loading font information for TS1+qhv on input line 61.
+ (/usr/share/texmf/tex/latex/tex-gyre/ts1qhv.fd
+File: ts1qhv.fd 2009/09/25 v1.2 font definition file for TS1/qhv
+)
+LaTeX Font Info:    Font shape `TS1/qhv/m/n' will be
+(Font)              scaled to size 10.29301pt on input line 61.
+
+Overfull \hbox (11.08115pt too wide) in paragraph at lines 88--89
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][] 
+ []
+
+[8]
+Overfull \hbox (5.20409pt too wide) in paragraph at lines 144--146
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][] 
  []
 
-[6]) [7] (./Freire_Legrand-Duchesne.aux)
+[9]
+Overfull \hbox (9.36229pt too wide) in paragraph at lines 158--159
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
 
-LaTeX Warning: There were undefined references.
-
- ) 
+) [10] (./Freire_Legrand-Duchesne.aux) ) 
 Here is how much of TeX's memory you used:
- 10291 strings out of 494936
- 139623 string characters out of 6179808
- 258636 words of memory out of 5000000
- 13367 multiletter control sequences out of 15000+600000
- 62084 words of font info for 77 fonts, out of 8000000 for 9000
+ 10354 strings out of 494936
+ 140721 string characters out of 6179808
+ 259639 words of memory out of 5000000
+ 13422 multiletter control sequences out of 15000+600000
+ 62450 words of font info for 78 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  44i,8n,75p,859b,1803s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-sc.enc}{/usr/
-share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{/usr/share/texmf
-/fonts/enc/dvips/tex-gyre/q-ec.enc}</usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/latxfont/lcircle1.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/pxfonts/pxsy.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qhvr.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/newpx/zplri.pfb>
-Output written on Freire_Legrand-Duchesne.pdf (7 pages, 133428 bytes).
+{/usr/share/texmf/fonts/enc/dvips/tex-g
+yre/q-ts1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-s
+c.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{/usr
+/share/texmf/fonts/enc/dvips/tex-gyre/q-ec.enc}</usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/latxfont/lcircle1.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/pxfonts/pxsy.pfb></usr/share/texmf/fonts/type1/public/tex-g
+yre/qhvr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplb.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
+Output written on Freire_Legrand-Duchesne.pdf (10 pages, 154572 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
- 61 compressed objects within 1 object stream
+ 127 PDF objects out of 1000 (max. 8388607)
+ 92 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

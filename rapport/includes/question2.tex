@@ -1,10 +1,22 @@
 Afin de calculer le pourcentage de ligne dupliquées, nous avons créé
 une nouvelle table, contenant les noms des programmes, leurs
 dommaines, les langages dans lesquels ils ont été écrits et leurs
-nombres de lignes dupliquées ainsi que leurs nombres de lignes
-totales. Nous avons enlevé de cette nouvelle table de données les
-programmes pour ayant un champs non renseigné (à l'aide de la commande
-\emph{na.omit}). Nous avons ensuite rajouté une colonne à celle ci
-contenant les pourcentages de lignes de codes dupliquées, avant
-de créer un histogrammes de ces pourcentages pour chaque programme,
-ordonné par ordre décroissant (figure \ref{pdlin_prog}).
+nombres de lignes dupliquées (figure \ref{fig:dlin_prog}) ainsi que
+leurs nombres de lignes totales. Nous avons enlevé de cette nouvelle
+table de données les programmes pour ayant un champs non renseigné (à
+l'aide de la commande \emph{na.omit}). Nous avons ensuite rajouté une
+colonne à celle ci contenant les pourcentages de lignes de codes
+dupliquées, avant de créer un histogrammes de ces pourcentages pour
+chaque programme, ordonné par ordre décroissant (figure
+\ref{fig:pdlin_prog}).
+
+\begin{figure}[!h]
+  \minipage{0.48\textwidth}
+  \includegraphics[width=\linewidth]{figures/dlin_prog.pdf}
+  \caption{}\label{fig:dlin_prog}
+  \endminipage\hfill
+  \minipage{0.48\textwidth}
+  \includegraphics[width=\linewidth]{figures/pdlin_prog.pdf}
+  \caption{}\label{fig:pdlin_prog}
+  \endminipage\hfill
+\end{figure}
