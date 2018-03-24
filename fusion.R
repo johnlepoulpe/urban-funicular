@@ -26,15 +26,14 @@ dev.off()
 ## Nombre de lignes de code par programme, ordonné par ordre décroissant
 pdf('rapport/figures/lin_prog.pdf')
 op = par(mar = c(7, 4, 4, 2) + 0.1)
-tab_lines = tab[order(tab$LinesOfCode, decreasing = TRUE),]
-barplot(tab_lines$LinesOfCode,
-        names.arg = tab_lines$Code,
+tab_lin = tab[order(tab$LinesOfCode, decreasing = TRUE),]
+barplot(tab_lin$LinesOfCode,
+        names.arg = tab_lin$Code,
         las = 2,
         main = "Nombre de lignes de code par programme")
 dev.off()
 
 ## Nombre de lignes dupliquées par programme, ordonné par ordre décroissant
-
 pdf('rapport/figures/dlin_prog.pdf')
 tab_dlines = tab[order(tab$DuplicatedLines, decreasing = TRUE),]
 tab_dlines_noNA = tab_dlines[!is.na(tab_dlines$DuplicatedLines),]
@@ -45,7 +44,6 @@ barplot(tab_dlines_noNA$DuplicatedLines,
 dev.off()
 
 ## Nombre de blocs dupliquées par programme, ordonné par ordre décroissant
-
 pdf('rapport/figures/dbl_prog.pdf')
 tab_dblocks = tab[order(tab$DuplicatedBlocks, decreasing = TRUE),]
 tab_dblocks_noNA = tab_dblocks[!is.na(tab_dblocks$DuplicatedBlocks),]
@@ -90,17 +88,35 @@ tabP_CO = tabP[tab$Language %in% c("C++", "C/C++"),]
 t.test(tabP_C$DupLin_per, conf.level = 0.9)
 t.test(tabP_CO$DupLin_per, conf.level = 0.9)
 
-
 ###############################################################################
 
 # Question 5
 
-tab_short = tab[tab$LinesOfCode <= median(tab$LinesOfCode),]
-tab_long = tab[tab$LinesOfCode > median(tab$LinesOfCode),]
+tab_Clang = tab[!is.na(tab$ClangWarning), ]
+
+tab_short = tab_Clang[tab_Clang$LinesOfCode <= median(tab_Clang$LinesOfCode),]
+tab_long = tab_Clang[tab_Clang$LinesOfCode > median(tab_Clang$LinesOfCode),]
 
 wilcox.test(tab_short$ClangWarning, tab_long$ClangWarning, alternative = "less")
 wilcox.test(tab_short$MinorWraning, tab_long$MinorWraning, alternative = "less")
 wilcox.test(tab_short$MajorWarning, tab_long$MajorWarning, alternative = "less")
+
+# ne suivent pas une loi normale
+shapiro.test(tab_Clang$LinesOfCode)
+shapiro.test(tab_Clang$ClangWarning[na.rm = TRUE])
+
+# Test de corrélation paramétrique de Pearson
+cor.test(tab_Clang$ClangWarning, tab_Clang$LinesOfCode)
+# Test de corrélation non-paramétrique de Spearman
+cor.test(tab_Clang$ClangWarning, tab_Clang$LinesOfCode, method = "spearman")
+
+pdf('rapport/figures/clang_lin.pdf')
+plot(tab_Clang$LinesOfCode, tab_Clang$ClangWarning,
+     xlab = "Lignes de code", ylab = "Nombre de warnings Clang",
+     main = "Nombre de warnings Clang en fonction du nombre de lignes de code")
+mod = lm(tab_Clang$ClangWarning ~ tab_Clang$LinesOfCode)
+abline(mod)
+dev.off()
 
 # Reset graphic parameters
 op = par(mar = c(5, 4, 4, 2) + 0.1)
