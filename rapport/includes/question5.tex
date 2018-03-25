@@ -4,30 +4,30 @@ avons commencé par séparer notre table en deux, l'une pour les
 programmes au nombre de lignes de code inférieur à la médiane et
 l'autre pour les autres programmes. 
 
-Nous avons ensuite effectué trois tests de Mann Whitney, un pour chaque
+Nous avons ensuite effectué trois tests de Mann-Whitney, un pour chaque
 type de warning (Clang, MinorWarning de gcc, MajorWarning de gcc),
 avec pour hypothèse nulle ``Il n'y a pas de différence significative
-du nombre de warnings à la compilation entre les programmes de
+du nombre moyen de warnings à la compilation entre les programmes de
 longueurs supérieures et inférieures à la médiane.''. Nous avons pour
 cela encore une fois supposé que les échantillons considérés suivaient
 une loi normale de variance identique. Lors du test, nous avons passé
-\emph{alternative = "less"} en argument à la fonction
-\emph{wilcox.test}, cela correspond au fait que nous nous attendons à
+\lstinline{alternative = "less"} en argument à la fonction
+\lstinline{wilcox.test}, cela correspond au fait que nous nous attendons à
 ce que le nombre de warnings soit supérieur pour pour les programmes
 long.
 
-Pour les Warning Clang, la p-value retournée par le test est de
+Pour les warnings Clang, la p-value retournée par le test est de
 0.0006216, au risque d'erreur 5\%, nous pouvons donc rejeter
-l'hypothèse nulle. Nous en concluons que le nombre de warnings Clang
+l'hypothèse nulle. Nous en concluons que le nombre moyen de warnings Clang
 est supérieur pour les programmes longs.
 
-Pour les Warning gcc, la p-value retournée par le test est de 0.7749
-et 0.08464 pour les warning mineurs et majeurs respéctivement. Au
+Pour les warnings gcc, la p-value retournée par le test est de 0.7749
+et 0.08464 pour les warning mineurs et majeurs respectivement. Au
 risque d'erreur 5\%, nous ne pouvons donc pas rejeter l'hypothèse
-nulle. Nous en concluons que le nombre de warnings gcc n'est pas
+nulle. Nous en concluons que le nombre moyen de warnings gcc n'est pas
 significativement supérieur pour les programmes longs.
 
-Le test de Mann Whitney étant un test de comparaison de moyennes, nous
+Le test de Mann-Whitney étant un test de comparaison de moyennes, nous
 avons voulu approfondir le lien entre le nombre de warnings Clang et la
 taille des programmes. Pour cela, nous avons décider de faire un test de
 corrélation entre ces deux grandeurs. Nous avons pour cela effectué un
@@ -44,8 +44,7 @@ corrélés.
 
 Nous avons donc généré un graphique représentant le nombre de warnings
 Clang en fonction du nombre de lignes de code, sur lequel nous avons
-tracé une régression linéaire (figure \ref{fig:clang_lin}).
-
+tracé une droite de régression linéaire (figure \ref{fig:clang_lin}).
 
 \begin{figure}[h]
   \centering

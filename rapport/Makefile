@@ -20,7 +20,7 @@ astyle:
 	astyle $(TEX_FILE) $(SUB_TEX_FILES)
 
 evince: all
-	evince Ferrand_Freire_Legrand-Duchesne.pdf
+	evince Freire_Legrand-Duchesne.pdf
 
 clean:
 	rm -r $(AUX_FILES) $(SUB_AUX_FILES)

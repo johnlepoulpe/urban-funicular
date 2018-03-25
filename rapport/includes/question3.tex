@@ -1,31 +1,28 @@
-Pour effectuer un comparaison sur le nombre de lignes de code
-dupliquées des programmes C et C++, il nous faut faire un test de
-Mann-Whitney (grâce à la fonction \emph{wilcox.test} en R. Pour que ce
-test soit valide, nous sommes obligés de supposer que les deux
-échantillons considérés suivent une loi normale, de variance
-identique. De plus, les mesures sont bien indépendantes les unes des
-autres.
+Pour effectuer un comparaison sur le nombre de lignes de code dupliquées des
+programmes C et C++, il nous faut faire un test de Mann-Whitney (grâce à la
+fonction \lstinline{wilcox.test} en R. Pour que ce test soit valide, nous sommes
+obligés de supposer que les deux échantillons considérés suivent une loi
+normale, de variance identique. De plus, les mesures sont bien indépendantes les
+unes des autres.
 
-Nous faisons pour hypothèse nulle ``Il n'y a pas de différence
-significative du nombre de lignes de code dupliquées en fonction du
-langage de programmation utilisé.''. La p-value retournée par le test
-est de 0.1608, au risque d'erreur 5\%, nous ne pouvons donc pas rejeter
-l'hypothèse nulle. Nous en concluons que le nombre de lignes de code
-dupliquées et le langage de programmation sont décorrélés.
+Nous faisons pour hypothèse nulle ``Il n'y a pas de différence significative entre les
+nombres moyens de lignes de code dupliquées selon le langage de programmation
+utilisé.''. La p-value retournée par le test est de 0.1608, au risque d'erreur
+5\%, nous ne pouvons donc pas rejeter l'hypothèse nulle. Nous en concluons que
+le langage de programmation n'a pas d'influence sur la moyenne de lignes de code
+dupliquées.
 
-Nous noterons que la longueur des codes biaise l'interprétation de la
-mesure: en effet, plus un code est long, plus le nombre de lignes
-dupliquées a de chance d'être élevé, aussi, un grand nombre de lignes
-de code dupliquées ne reflète pas une mauvaise technique de
-programmation, tout dépend de la taille du code!  Nous avons donc
-aussi comparé le pourcentage des lignes de code dupliquées pour les
+Nous noterons que la longueur des codes biaise l'interprétation de la mesure: en
+effet, plus un code est long, plus le nombre de lignes dupliquées a de chance
+d'être élevé, aussi, un grand nombre de lignes de code dupliquées ne reflète pas
+une mauvaise technique de programmation, tout dépend de la taille du code! Nous
+avons donc aussi comparé le pourcentage des lignes de code dupliquées pour les
 programmes écrits en C et en C++.
 
-L'hypothèse nulle devient ``Il n'y a pas de différence significative
-du pourcentage de lignes de code dupliquées en fonction du langage de
-programmation utilisé.''.  La p-value retournée par le test est de
-0.07692, au risque d'erreur 5\%, nous ne pouvons donc toujours pas
-rejeter l'hypothèse nulle. Nous en concluons que le langage de
-programmation et le pourcentage de lignes de code dupliquées sont
-décorréllés.
+L'hypothèse nulle devient ``Il n'y a pas de différence significative entre les
+moyennes du pourcentage de lignes de code dupliquées selon le langage de
+programmation utilisé.''. La p-value retournée par le test est de 0.07692, au
+risque d'erreur 5\%, nous ne pouvons donc toujours pas rejeter l'hypothèse
+nulle. Nous en concluons que le langage de programmation n'a pas d'influence sur
+la moyenne du pourcentage de lignes de code dupliquées.
 
