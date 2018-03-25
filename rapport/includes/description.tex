@@ -1,22 +1,22 @@
-Le jeu de données fournis contient les mesures de la qualité des
-programmes couramment utilisés par les biologistes. Seize programmes
+Le jeu de données fourni contient les mesures de la qualité des
+programmes couramment utilisés en biologie. Seize programmes
 sont ainsi examinés, selon des critères tels que le nombre de lignes ou
-de blocs dupliqués, le nombre et le type de warning lors de la
+de blocs dupliqués, le nombre et le type de warnings lors de la
 compilation ou encore le statut donné par valgrind sur la gestion
 mémoire.
 
-Un premier graphique nous permet de compter le nombre de programme
-écrit dans chaque langage du jeu de donnée (figure \ref{fig:prog_lang}).
+Un premier graphique nous permet de compter le nombre de programmes
+écrit dans chaque langage du jeu de données (figure \ref{fig:prog_lang}).
 
-Nous avons ensuite décider de représenter le nombre de lignes de codes
+Nous avons ensuite décidé de représenter le nombre de lignes de code
 par programme (figure \ref{fig:lin_prog}). Afin que la représentation
 soit plus lisible, nous avons utilisé la commande \lstinline{order}
-pour ordonner les colonnes par ordres décroissants de valeurs. De
+pour ordonner les colonnes par ordre décroissant de valeurs. De
 plus, nous avons affiché les noms des programmes en vertical, afin
 d'améliorer la lisibilité (grâce à l'argument \lstinline{las = 2} de
 \lstinline{barplot}).
 
-De même, nous avons créer un histogrammes contenant le nombre de blocs
+De même, nous avons créé un histogramme contenant le nombre de blocs
 dupliqués par programme (figure \ref{fig:dbl_prog}). Il est nécessaire
 de faire attention à ne pas prendre en compte les programmes pour
 lesquels cette valeur n'est pas renseignée (c'est le cas de \emph{FDPPDIV}
