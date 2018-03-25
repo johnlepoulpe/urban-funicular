@@ -1,5 +1,3 @@
-setwd("~/marco/Documents/Cours/sem2/Stat/TPs/Eval/urban-funicular")
-sink("rapport/tests/tests.txt", append = TRUE)
 tab = read.table("programs.txt", header = TRUE, sep = "\t" )
 head(tab)
 summary(tab)
